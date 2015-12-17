@@ -1,7 +1,7 @@
 # Health Check Elastic Search
 
 ## CI
-[![Circle CI](https://circleci.com/gh/LucasRodrigues/health-check-redis.svg?style=svg)](https://circleci.com/gh/LucasRodrigues/health-check-redis)
+[![Circle CI](https://circleci.com/gh/LucasRodrigues/health-check-elastic-search/tree/master.svg?style=svg)](https://circleci.com/gh/LucasRodrigues/health-check-elastic-search/tree/master)
 
 ## Install
 

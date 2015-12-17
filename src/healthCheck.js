@@ -3,12 +3,12 @@ import Format from './format';
 
 export default class HealthCheck {
 
-  static _resolveParameter (configurations){
-    if(!Array.isArray(configurations)){
+  static _resolveParameter(configurations) {
+    if (!Array.isArray(configurations)) {
       configurations = [configurations];
     }
 
-    return configurations
+    return configurations;
   }
 
   static do(configurations) {
@@ -30,11 +30,3 @@ export default class HealthCheck {
     });
   }
 }
-
-HealthCheck.do({
-  host:'localhost:9200'
-}).then(r => {
-  console.log(r);
-}).catch(r => {
-  console.log(r);
-})

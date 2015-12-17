@@ -1,4 +1,4 @@
-# Health Check Redis
+# Health Check Elastic Search
 
 ## CI
 [![Circle CI](https://circleci.com/gh/LucasRodrigues/health-check-redis.svg?style=svg)](https://circleci.com/gh/LucasRodrigues/health-check-redis)
@@ -6,44 +6,32 @@
 ## Install
 
 ```
-$ npm install health-check-redis
+$ npm install health-check-elastic-search
 ```
 
 ## Usage
 
 ```
-var healthCheckRedis = require('health-check-redis');
+var healthCheckElasticSearch = require('health-check-elastic-search');
 
-healthCheckRedis.do([
-{
-  host: '127.0.0.1',
-  port: 6379
-},
-{
-  host: 'wrong host',
-  port: 6379
-}])
+healthCheckElasticSearch.do({
+  host: 'localhost:9200'
+})
  .then(function(result){
     console.log(result); 
     
     /* 
-      { 
-        health: false,
-        success: 1,
+      { health: false,
+        success: 0,
         error: 1,
         details: 
-          [ 
-            { 
-              name: '127.0.0.1:6379', 
-              health: true, 
-              message: '' 
-            },
-            { 
-              name: 'wrong host:6379',
-              health: false,
-              message: 'Redis connection to wrong host:6379 failed - getaddrinfo ENOTFOUND wrong host wrong host:6379' 
-            } 
-          ] 
+         [ 
+           { 
+             name: 'localhost:9200',
+             health: false,
+             message: 'No Living connections' 
+           } 
+         ] 
       }
     */
  })

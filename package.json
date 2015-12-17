@@ -1,7 +1,7 @@
 {
-  "name": "health-check-redis",
-  "description": "Get the health of redis infra",
-  "repository": "https://github.com/LucasRodrigues/health-check-redis",
+  "name": "health-check-elastic-search",
+  "description": "Get the health of elastic search infra",
+  "repository": "https://github.com/LucasRodrigues/health-check-elastic-search",
   "version": "0.0.6",
   "license": "MIT",
   "author": {
@@ -20,7 +20,7 @@
   },
   "keywords": [
     "health check",
-    "redis"
+    "elastic search"
   ],
   "devDependencies": {
     "babel-preset-es2015": "^6.1.2",

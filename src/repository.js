@@ -9,20 +9,19 @@ export default class Repository {
       );
 
       const callbackPing = error => {
-        if(error){
+        if (error) {
           resolve({
             configuration: configuration,
             error: error
           });
-        }else{
+        } else {
           resolve({
             configuration: configuration,
             error: null
           });
         }
-
       };
-      client.ping({},callbackPing);
+      client.ping({}, callbackPing);
     });
   }
 }

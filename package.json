@@ -16,7 +16,8 @@
   },
   "main": "./index.js",
   "dependencies": {
-    "elasticsearch": "^10.0.1"
+    "elasticsearch": "^10.0.1",
+    "health-check-message-format": "0.0.1"
   },
   "keywords": [
     "health check",

@@ -1,5 +1,5 @@
 import Repository from './repository';
-import Format from './format';
+import HealthCheckMessageFormat from 'health-check-message-format';
 
 export default class HealthCheck {
 
@@ -22,7 +22,19 @@ export default class HealthCheck {
 
       Promise.all(promises)
         .then(statuses => {
-          resolve(Format.do(statuses));
+          const configuration = {
+            fnIsHealthGood: status => {
+              return (status.error === null);
+            },
+            fnName: status => {
+              return `${status.configuration.host}`;
+            },
+            fnErrorMessage: status => {
+              return status.error.message;
+            }
+          };
+
+          resolve(HealthCheckMessageFormat.do(statuses, configuration));
         })
         .catch(error => {
           reject(error);

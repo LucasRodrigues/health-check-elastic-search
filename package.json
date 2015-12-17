@@ -2,7 +2,7 @@
   "name": "health-check-elastic-search",
   "description": "Get the health of elastic search infra",
   "repository": "https://github.com/LucasRodrigues/health-check-elastic-search",
-  "version": "0.0.6",
+  "version": "0.0.1",
   "license": "MIT",
   "author": {
     "name": "Lucas Rodrigues",

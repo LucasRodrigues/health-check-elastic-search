@@ -17,13 +17,13 @@ export default class HealthCheck {
         }
       };
 
-      HealthCheckCore.do(configurations,Repository.test,configuration)
+      HealthCheckCore.do(configurations, Repository.test, configuration)
         .then(result => {
           resolve(result);
         })
         .catch(error => {
           reject(error);
-        })
+        });
     });
   }
 }

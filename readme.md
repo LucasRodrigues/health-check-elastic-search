@@ -13,7 +13,7 @@ $ npm install health-check-elastic-search
 
 ## Usage
 
-```
+```js
 var healthCheckElasticSearch = require('health-check-elastic-search');
 
 healthCheckElasticSearch.do({
